@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Hai, Sayangku!</title>
+    <link rel="icon" href="https://i.ibb.co.com/hXZsYxZ/heart.png">
+    <link rel="stylesheet" href="valentine.css" />
+  </head>
+  <body>
+    <div id="valentineQuestion"><b>adek minta maaf yaa mas riyan sayang</b></div>
+    <button class="answerButton" onclick="location.href='thankyou.html'">
+      iya dimaafin sayang
+    </button>
+    <button class="answerButton" id="noButton">nggak ah o(╥﹏╥)o</button>
+    <br />
+    <img src="1.gif" alt="cat asking question" class="responsive" />
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+  </body>
+</html>
